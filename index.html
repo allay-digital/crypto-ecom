@@ -57,18 +57,29 @@
             </div>
         </div>
         <h1>FAQ</h1>
-        <div class="faq__block">
-            <h2>Как это работает?</h2>
-            <img class="arrow" src="/img/arrow-down.svg" alt="">
-        </div>
-        <div class="faq__block">
-            <h2>А это точно безопасно?</h2>
-            <img class="arrow" src="/img/arrow-down.svg" alt="">
-        </div>
-        <div class="faq__block">
-            <h2>А нах так дорого?</h2>
-            <img class="arrow" src="/img/arrow-down.svg" alt="">
-        </div>
+        <ul class="accordion">
+            <li>
+                <input type="radio" name="accordion" id="first" checked>
+                <label for="first"><h2>Как это работает?</h2></label>
+                <div class="content">
+                    <p> А никак это нахуй не работает! Это все одна большая наебка для уебка. Надо идти на завод работать, а не хуйней заниматься</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="second">
+                <label for="second"><h2>Как это работает?</h2></label>
+                <div class="content">
+                    <p> А никак это нахуй не работает! Это все одна большая наебка для уебка. Надо идти на завод работать, а не хуйней заниматься</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="third">
+                <label for="third"><h2>Как это работает?</h2></label>
+                <div class="content">
+                    <p> А никак это нахуй не работает! Это все одна большая наебка для уебка. Надо идти на завод работать, а не хуйней заниматься</p>
+                </div>
+            </li>
+        </ul>
     </div>
 
     <script src="https://cdn.sellix.io/static/js/embed.js"></script>
