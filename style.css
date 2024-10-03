@@ -60,7 +60,7 @@ p2{
     margin: 20px auto;
     background-color:#fff;
     display:grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     grid-row: auto auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
