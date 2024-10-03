@@ -99,14 +99,15 @@ p2{
     border-radius: 30px;
     display: grid;
     cursor: pointer;
-    background-color: var(--bg-secondary-color);
+    /* background-color: var(--bg-secondary-color); */
     grid-template-columns: 1fr 46px;
     padding: 0 30px;
     transition: 0.2s;
+    align-items: center;
 }
 
 .toggle-list__item-open {
-    background-color: var(--accent-color);
+    /* background-color: var(--accent-color); */
 }
 
 .toggle-list__item-open .toggle-list__content {
