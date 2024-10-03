@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <div class="header__line">
+        <div class="header__menu"> <img src="/img/burger-menu.svg" alt=""></div>
+        <div class="header__chart"> <img src="/img/shopping-chart.svg" alt=""></div>
+    </div>
+    <!-- <img class="product__img" src="/img/hoodie-black.jpg" alt=""> -->
+
+    <div class="carousel">
+        <img id="mainImage" src="/img/hoodie-black.jpg" alt="Carousel Image" class="carousel-image">
+    </div>
+
+    <div class="thumbnails">
+        <img src="/img/hoodie-black.jpg" alt="Thumbnail 1" onclick="changeImage('/img/hoodie-black.jpg')">
+        <img src="/img/hoodie-grey.jpg" alt="Thumbnail 2" onclick="changeImage('/img/hoodie-grey.jpg')">
+        <img src="/img/jacket-black.png" alt="Thumbnail 3" onclick="changeImage('/img/jacket-black.png')">
+        <img src="/img/hoodie-grey.jpg" alt="Thumbnail 2" onclick="changeImage('/img/hoodie-grey.jpg')">
+        <img src="/img/jacket-black.png" alt="Thumbnail 3" onclick="changeImage('/img/jacket-black.png')">
+    </div>
+
+    <h2>DIAMOND HOODIE BLACK</h2>
+    <p>8 490 р.</p>
+
+    <div class="product"></div>
+        <h2>Select Size</h2>
+        <select id="sizeSelector" onchange="updateSize()">
+            <option value="S">Small (S)</option>
+            <option value="M">Medium (M)</option>
+            <option value="L">Large (L)</option>
+            <option value="XL">Extra Large (XL)</option>
+        </select>
+        
+        <p id="selectedSize">   </p> <!-- текст вставляется из js -->
+    </div>
+
+    <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
+        Купить
+    </button>
+
+
+
+    <script src="carousel.js"> </script>
+    <script src="size-selector.js"></script>
+    <script src="https://cdn.sellix.io/static/js/embed.js"></script>
+</body>
+</html>

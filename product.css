@@ -1,0 +1,108 @@
+.golos-text-uniquifier {
+    font-family: "Golos Text", sans-serif;
+      font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+:root {
+    --bg-secondary-color: #F5F5F5;
+    --accent-color: #B8E3FF;
+    --text-color: #000000;
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Golos Text", sans-serif;
+    color: #000;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #000;
+    font-size: 24px;
+    margin-top: 60px;
+}
+h2{
+    color: #000;
+    font-size: 20px;
+    margin-top: 8px;
+}
+p{
+    color: #000;
+    font-size: 16px;
+    margin: 0;
+}
+p2{
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.header__line {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    justify-content: center;
+}
+
+
+.carousel {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel-image {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    display: inline-block;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 30px;
+}
+
+.thumbnails img {
+    width: 50px;
+    height: auto;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    border: solid 1px #000;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+.product {
+    text-align: center;
+    margin-top: 20px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#selectedSize {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.purchase__btn{
+    width: 50%;
+    height: 36px;
+    border: 0;
+    border-radius: 25px;
+    margin-top: 10px;
+}
