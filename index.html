@@ -17,43 +17,57 @@
     </div>
     <div class="container"> 
         <h1> E-com web app на примере магазина одежды</h1>
+        <img class="main__img" src="/img/main-img.jpg" alt="">
         <h1>Наши продукты</h1>
-        <div class="product__line">
-            <div class="product__background">
-                <div class="product__img"><img src="/img/image 80.png" alt=""></div>
-                <button class="purchase__btn" data-sellix-product="6685a5ac43565" type="submit">
-                    Купить
-                </button>
-                <div class="price__info">
-                    <h2>Blum Soft v.2</h2>
-                    <p>$60.00</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="product__line"></div>
-            <div class="product__background">
-                <div class="product__img"><img src="/img/image 82.png" alt=""></div>
+        <div class="product__container">
+            <div class="box">
+                <img class="product__img" src="/img/hoodie-black.jpg" alt="">
+                <h2>DIAMOND HOODIE BLACK</h2>
+                <p>8490 р.</p>
                 <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
                     Купить
                 </button>
-                <div class="price__info">
-                    <h2>Not Pixel v.1</h2>
-                    <p>$90.00</p>
-                </div>
             </div>
-        </div>
-
-        <div class="product__line"></div>
-            <div class="product__background">
-                <div class="product__img__center"><img src="/img/image 83.png" alt=""></div>
+            <div class="box">
+                <img class="product__img" src="/img/hoodie-grey.jpg" alt="">
+                <h2>DIAMOND HOODIE<br>GREY</h2>
+                <p>8 490 р.</p>
                 <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
                     Купить
                 </button>
-                <div class="price__info">
-                    <h2>На пиво</h2>
-                    <p>$1.00</p>
-                </div>
+            </div>
+            <div class="box">
+                <img class="product__img" src="/img/jacket-black.png" alt="">
+                <h2>MONOGRAM JACKET BLACK</h2>
+                <p>9 990 р.</p>
+                <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
+                    Купить
+                </button>
+            </div>
+            <div class="box">
+                <img class="product__img" src="/img/jacket-grey.png" alt="">
+                <h2>MONOGRAM JACKET GREY</h2>
+                <p>9 990 р.</p>
+                <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
+                    Купить
+                </button>
+            </div>
+            <div class="box">
+                <img class="product__img" src="/img/scarf-green.jpg" alt="">
+                <h2>MONEY SCARF GREEN</h2>
+                <p>3 490 р.</p>
+                <p2>Нет в наличии</p2>
+                <!-- <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
+                    Купить
+                </button> -->
+            </div>
+            <div class="box">
+                <img class="product__img" src="/img/scarf-black.jpg" alt="">
+                <h2>MONEY SCARF BLACK</h2>
+                <p>3 490 р.</p>
+                <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
+                    Купить
+                </button>
             </div>
         </div>
         <h1>FAQ</h1>
@@ -81,9 +95,10 @@
                 <p class="toggle-list__content">Здесь можно добавить любые другие вопросы и ответы на них.</p>
             </li>
         </ul>
-        <script src="./toggle-list.js"></script>
     </div>
 
+    <script src="./toggle-list.js"></script>
     <script src="https://cdn.sellix.io/static/js/embed.js"></script>
 </body>
 </html>
+
