@@ -61,7 +61,8 @@ p3 {
 }
 
 .list__item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 80px 1fr 70px;
 }
 
 .list__item__img {
