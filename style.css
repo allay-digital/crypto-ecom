@@ -47,28 +47,6 @@ p3 {
 .container {
 
 }
-.header {
-    max-height: 40px;
-    display: flex;
-    gap: 60px;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
-.header__cart {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
-.header__cart__img {
-    width: 24px;
-}
-.header__cart__price {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
 
 
 .main__img {

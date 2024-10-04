@@ -38,9 +38,12 @@ function updateCart() {
         cartItems.appendChild(li);
     });
 
-    // Update the total price display
-    document.getElementById("totalPrice").innerText = `${total}`;
+    // Format the total price with spaces and currency
+    total = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' р.';
+
+    document.getElementById("totalPrice").innerText = total;
 }
+
 
 function removeFromCart(productId) {
     const index = cart.findIndex(item => item.id === productId);

@@ -6,18 +6,25 @@
     <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet"./>
     <title>Document</title>
     <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="cart" class="cart">
+    <div class="header">
+        <a class="header__link" href="./index.html"><h3 class="header__logo">LOGO</h3></a>
+        <div class="header__cart">
+            <img class="header__cart__img" src="./img/shopping-cart.png" alt="">
+            <p3 class="header_cart_price" id="totalPrice"></p3>
+            <a class="header__cart__link" href="./cart.html"></a>
+        </div>
+    </div>
+
+    <div id="cart" class="cart" style="display: none;">
         <h2>Корзина</h2>
         <ul id="cartItems"></ul>
-        <p id="totalPrice">Итого: 0 р.</p>
     </div>
-    
-    <button data-sellix-cart="PRODUCT_UNIQID:QUANTITY,PRODUCT_UNIQID" onclick="handleCheckout()">Checkout</button>
 
     <div class="carousel">
         <img id="mainImage" src="./img/hoodie-grey.jpg" alt="Carousel Image" class="carousel-image">

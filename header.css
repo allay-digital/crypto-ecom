@@ -1,0 +1,36 @@
+.header {
+    max-height: 40px;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header__cart {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.header__cart__img {
+    width: 24px;
+}
+.header__cart__price {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.header__cart__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
