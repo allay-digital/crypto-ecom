@@ -32,9 +32,22 @@ function updateCart() {
     cart.forEach((item) => {
         total += item.price * item.quantity; // Calculate total price considering quantity
         const li = document.createElement("li");
-        li.innerHTML = `<img src="${item.image}" alt="${item.name}" style="width: 50px;"> 
-                        ${item.name} - ${item.price} р. (Количество: ${item.quantity}) 
-                        <button data-sellix-cart-remove="${item.id}" onclick="removeFromCart('${item.id}')">Удалить</button>`;
+        li.innerHTML = `   
+                    <li class="list__item">
+                    <img class="list__item__img" style="width: 80px;" src="${item.image}" alt="">
+                    <div class="list__item__details">
+                        <div>${item.name}</div>
+                        <div>${item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' р.'}</div>
+                    </div>
+                    
+                    <div class="count">
+                        <button class="count__btn" data-sellix-cart-remove="${item.id}" onclick="removeFromCart('${item.id}')">-</button>
+                        <p class="count__num">${item.quantity}</p>
+                        <button class="count__btn" data-sellix-cart-add="${item.id}" onclick="toCart('${item.id}')">+</button>
+                    </div>
+                </li>
+                        
+                        `;
         cartItems.appendChild(li);
     });
 
@@ -59,6 +72,19 @@ function removeFromCart(productId) {
         updateCart(); // Update the cart display
         saveCartToLocalStorage(); // Save updated cart to local storage
     }
+}
+
+function toCart(productId) {
+    const index = cart.findIndex(item => item.id === productId);
+
+    if (index > -1) {
+        cart[index].quantity++;
+    } else {
+        cart.push({ id: productId, quantity: 1 });
+    }
+
+    updateCart();
+    saveCartToLocalStorage();
 }
 
 function handleCheckout() {

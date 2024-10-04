@@ -23,11 +23,12 @@
     <div class="container">
         <div id="cart" class="cart">
             <h2>Корзина</h2>
-            <ul id="cartItems"></ul>
+            <ul class="list" id="cartItems">
+
+            </ul>
             <p id="totalPrice"></p>
         </div>
-        <button data-sellix-cart="PRODUCT_UNIQID:QUANTITY,PRODUCT_UNIQID" onclick="handleCheckout()">Checkout</button>
-    
+        <button class="btn__cart" data-sellix-cart="PRODUCT_UNIQID:QUANTITY,PRODUCT_UNIQID" onclick="handleCheckout()">Перейти к оформлению</button>
     </div>
 
     <script src="./scripts/shopping-cart.js"></script>
