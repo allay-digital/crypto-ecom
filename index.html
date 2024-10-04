@@ -11,10 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header__line">
+    <!-- <div class="header__line">
         <div class="header__menu"> <img src="./img/burger-menu.svg" alt=""></div>
         <div class="header__chart"> <img src="./img/shopping-chart.svg" alt=""></div>
+    </div> -->
+    <div id="cart" class="cart">
+        <h2>Корзина</h2>
+        <ul id="cartItems"></ul>
+        <p id="totalPrice">Итого: 0 р.</p>
     </div>
+    <button data-sellix-cart="PRODUCT_UNIQID:QUANTITY,PRODUCT_UNIQID" onclick="handleCheckout()">Checkout</button>
+
     <div class="container"> 
         <h1> E-com web app на примере магазина одежды</h1>
         <img class="main__img" src="./img/main-img.jpg" alt="">
@@ -26,19 +33,24 @@
                 </a>
                 <h2>DIAMOND HOODIE BLACK</h2>
                 <p>8490 р.</p>
-                <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
+                <button class="purchase__btn" data-sellix-product="6685a5ac43565" type="submit">
                     Купить
                 </button>
+                <!-- <button class="cart__btn" onclick="addToCart('DIAMOND HOODIE BLACK', 8490, './img/hoodie-black.jpg')">
+                    Добавить в корзину
+                </button> -->
+                <button data-sellix-cart-add="6685a5ac43565" onclick="addToCart('DIAMOND HOODIE BLACK', 8490, './img/hoodie-black.jpg', '6685a5ac43565')">Добавить в корзину</button>
             </div>
             <div class="box">
                 <a href="./hoodie-grey.html">
-                    <img class="product__img" src="./img/hoodie-grey.jpg" href="./hoodie-grey.html" alt="">
+                    <img class="product__img" src="./img/hoodie-grey.jpg" alt="">
                 </a>
                 <h2>DIAMOND HOODIE<br>GREY</h2>
                 <p>8 490 р.</p>
-                <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
+                <button class="purchase__btn" data-sellix-product="669fe65371165" type="submit">
                     Купить
                 </button>
+                <button data-sellix-cart-add="669fe65371165" onclick="addToCart('DIAMOND HOODIE BLACK', 8490, './img/hoodie-black.jpg', '669fe65371165')">Добавить в корзину</button>
             </div>
             <div class="box">
                 <a href="jacket-black.html">
@@ -61,7 +73,9 @@
                 </button>
             </div>
             <div class="box">
-                <img class="product__img" src="./img/scarf-green.jpg" alt="">
+                <a href="scarf-green.html">
+                    <img class="product__img" src="./img/scarf-green.jpg" alt="">
+                </a>
                 <h2>MONEY SCARF GREEN</h2>
                 <p>3 490 р.</p>
                 <p2>Нет в наличии</p2>
@@ -70,7 +84,9 @@
                 </button> -->
             </div>
             <div class="box">
-                <img class="product__img" src="./img/scarf-black.jpg" alt="">
+                <a href="scarf-black.html">
+                    <img class="product__img" src="./img/scarf-black.jpg" alt="">
+                </a>
                 <h2>MONEY SCARF BLACK</h2>
                 <p>3 490 р.</p>
                 <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
@@ -105,6 +121,7 @@
         </ul>
     </div>
 
+    <script src="./scripts/shopping-cart.js"></script>
     <script src="./scripts/toggle-list.js"></script>
     <script src="https://cdn.sellix.io/static/js/embed.js"></script>
 </body>
