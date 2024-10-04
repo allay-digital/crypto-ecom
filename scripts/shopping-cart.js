@@ -39,7 +39,7 @@ function updateCart() {
     });
 
     // Update the total price display
-    document.getElementById("totalPrice").innerText = `Итого: ${total} р.`;
+    document.getElementById("totalPrice").innerText = `${total}`;
 }
 
 function removeFromCart(productId) {

@@ -11,10 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- <div class="header__line">
-        <div class="header__menu"> <img src="./img/burger-menu.svg" alt=""></div>
-        <div class="header__chart"> <img src="./img/shopping-chart.svg" alt=""></div>
-    </div> -->
+    <div class="header">
+        <h3 class="header__logo">LOGO</h3>
+        <div class="header__cart">
+            <img class="header__cart__img" src="./img/shopping-cart.png" alt="">
+            <p3 class="header_cart_price" id="totalPrice"></p3>
+        </div>
+    </div>
+
     <div id="cart" class="cart">
         <h2>Корзина</h2>
         <ul id="cartItems"></ul>
@@ -33,13 +37,7 @@
                 </a>
                 <h2>DIAMOND HOODIE BLACK</h2>
                 <p>8490 р.</p>
-                <button class="purchase__btn" data-sellix-product="6685a5ac43565" type="submit">
-                    Купить
-                </button>
-                <!-- <button class="cart__btn" onclick="addToCart('DIAMOND HOODIE BLACK', 8490, './img/hoodie-black.jpg')">
-                    Добавить в корзину
-                </button> -->
-                <button data-sellix-cart-add="6685a5ac43565" onclick="addToCart('DIAMOND HOODIE BLACK', 8490, './img/hoodie-black.jpg', '6685a5ac43565')">Добавить в корзину</button>
+                <button class="purchase__btn" data-sellix-cart-add="66ffe834cf59f" onclick="addToCart('DIAMOND HOODIE BLACK', 8490, './img/hoodie-black.jpg', '66ffe834cf59f')">Добавить в корзину</button>
             </div>
             <div class="box">
                 <a href="./hoodie-grey.html">
@@ -47,10 +45,7 @@
                 </a>
                 <h2>DIAMOND HOODIE<br>GREY</h2>
                 <p>8 490 р.</p>
-                <button class="purchase__btn" data-sellix-product="669fe65371165" type="submit">
-                    Купить
-                </button>
-                <button data-sellix-cart-add="669fe65371165" onclick="addToCart('DIAMOND HOODIE BLACK', 8490, './img/hoodie-black.jpg', '669fe65371165')">Добавить в корзину</button>
+                <button class="purchase__btn" data-sellix-cart-add="66ffe8ceb6202" onclick="addToCart('DIAMOND HOODIE GREY', 8490, './img/hoodie-grey.jpg', '66ffe8ceb6202')">Добавить в корзину</button>
             </div>
             <div class="box">
                 <a href="jacket-black.html">
@@ -58,9 +53,7 @@
                 </a>
                 <h2>MONOGRAM JACKET BLACK</h2>
                 <p>9 990 р.</p>
-                <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
-                    Купить
-                </button>
+                <button class="purchase__btn" data-sellix-cart-add="66ffe9272bad5" onclick="addToCart('MONOGRAM JACKET BLACK', 9900, './img/jacket-black.png', '66ffe9272bad5')">Добавить в корзину</button>
             </div>
             <div class="box">
                 <a href="jacket-grey.html">
@@ -68,9 +61,7 @@
                 </a>
                 <h2>MONOGRAM JACKET GREY</h2>
                 <p>9 990 р.</p>
-                <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
-                    Купить
-                </button>
+                <button class="purchase__btn" data-sellix-cart-add="66ffe9a97c429" onclick="addToCart('MONOGRAM JACKET GREY', 9900, './img/jacket-grey.png', '66ffe9a97c429')">Добавить в корзину</button>
             </div>
             <div class="box">
                 <a href="scarf-green.html">
@@ -79,9 +70,6 @@
                 <h2>MONEY SCARF GREEN</h2>
                 <p>3 490 р.</p>
                 <p2>Нет в наличии</p2>
-                <!-- <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
-                    Купить
-                </button> -->
             </div>
             <div class="box">
                 <a href="scarf-black.html">
@@ -89,9 +77,7 @@
                 </a>
                 <h2>MONEY SCARF BLACK</h2>
                 <p>3 490 р.</p>
-                <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
-                    Купить
-                </button>
+                <button class="purchase__btn" data-sellix-cart-add="66ffeab3811c2" onclick="addToCart('MONEY SCARF BLACK', 3490, './img/scarf-black.jpg', '66ffeab3811c2')">Добавить в корзину</button>
             </div>
         </div>
         <h1>FAQ</h1>
