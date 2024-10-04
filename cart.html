@@ -20,12 +20,15 @@
         </div>
     </div>
 
-    <div id="cart" class="cart">
-        <h2>Корзина</h2>
-        <ul id="cartItems"></ul>
-        <p id="totalPrice"></p>
+    <div class="container">
+        <div id="cart" class="cart">
+            <h2>Корзина</h2>
+            <ul id="cartItems"></ul>
+            <p id="totalPrice"></p>
+        </div>
+        <button data-sellix-cart="PRODUCT_UNIQID:QUANTITY,PRODUCT_UNIQID" onclick="handleCheckout()">Checkout</button>
+    
     </div>
-    <button data-sellix-cart="PRODUCT_UNIQID:QUANTITY,PRODUCT_UNIQID" onclick="handleCheckout()">Checkout</button>
 
     <script src="./scripts/shopping-cart.js"></script>
     <script src="./scripts/toggle-list.js"></script>

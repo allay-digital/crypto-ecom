@@ -26,65 +26,64 @@
         <ul id="cartItems"></ul>
     </div>
 
-    <div class="carousel">
-        <img id="mainImage" src="./img/hoodie-black.jpg" alt="Carousel Image" class="carousel-image">
-    </div>
-
-    <div class="thumbnails">
-        <img src="./img/hoodie-black.jpg" alt="Thumbnail 1" onclick="changeImage('/img/hoodie-black.jpg')">
-        <img src="./img/hoodie-carousel-2.jpg" alt="Thumbnail 2" onclick="changeImage('/img/hoodie-carousel-2.jpg')">
-        <img src="./img/hoodie-carousel-3.jpg" alt="Thumbnail 3" onclick="changeImage('/img/hoodie-carousel-3.jpg')">
-        <img src="./img/hoodie-carousel-4.jpg" alt="Thumbnail 2" onclick="changeImage('/img/hoodie-carousel-4.jpg')">
-        <img src="./img/hoodie-sizes.jpg" alt="Thumbnail 3" onclick="changeImage('/img/hoodie-sizes.jpg')">
-    </div>
-
-    <h2>DIAMOND HOODIE BLACK</h2>
-    <p>8 490 р.</p>
-
-    <div class="product"></div>
-        <h2>Select Size</h2>
-        <select id="sizeSelector" onchange="updateSize()">
-            <option value="S">Small (S)</option>
-            <option value="M">Medium (M)</option>
-            <option value="L">Large (L)</option>
-            <option value="XL">Extra Large (XL)</option>
-        </select>
-        
-        <p id="selectedSize">   </p> <!-- текст вставляется из js -->
-    </div>
+    <div class="container">
+        <div class="carousel">
+            <img id="mainImage" src="./img/hoodie-black.jpg" alt="Carousel Image" class="carousel-image">
+        </div>
     
-    <button class="btn purchase-cart__btn" data-sellix-cart-add="66ffe834cf59f" onclick="addToCart('DIAMOND HOODIE BLACK', 8490, './img/hoodie-black.jpg', '66ffe834cf59f')">Добавить в корзину</button>
-    <button class="btn purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
-        КУПИТЬ
-    </button>
-
-    <ul class="toggle-list" id="toggleList">
-        <li class="toggle-list__item">
-            <h3 class="toggle-list__heading--title">Характеристики</h3>
-            <img class="toggle-list__heading--img" src="./img/arrow.svg" alt="#">
-            <p class="toggle-list__content">
-                • unisex<br>
-                • 4000+ стойких страз<br>
-                • уникальный силуэт oversize hmmls<br>
-                • логотип выполнен шелкографией<br>
-                • худи выполнен из плотного футера<br><br>
-                
-                Состав: 100% хлопок<br>
-                Плотность: 340 гр/м</p>
-        </li>
-        <li class="toggle-list__item">
-            <h3 class="toggle-list__heading--title">Размерная таблица</h3>
-            <img class="toggle-list__heading--img" src="./img/arrow.svg" alt="#">
-            <p class="toggle-list__content">
-                <img class="size__table" src="./img/hoodie-sizes.jpg" alt="">
-            </p>
-        </li>
-        <li class="toggle-list__item">
-            <h3 class="toggle-list__heading--title">Доставка</h3>
-            <img class="toggle-list__heading--img" src="./img/arrow.svg" alt="#">
-            <p class="toggle-list__content">Доставка в течение 15-20 рабочих дней</p>
-        </li>
-    </ul>
+        <div class="thumbnails">
+            <img src="./img/hoodie-black.jpg" alt="Thumbnail 1" onclick="changeImage('/img/hoodie-black.jpg')">
+            <img src="./img/hoodie-carousel-2.jpg" alt="Thumbnail 2" onclick="changeImage('/img/hoodie-carousel-2.jpg')">
+            <img src="./img/hoodie-carousel-3.jpg" alt="Thumbnail 3" onclick="changeImage('/img/hoodie-carousel-3.jpg')">
+            <img src="./img/hoodie-carousel-4.jpg" alt="Thumbnail 2" onclick="changeImage('/img/hoodie-carousel-4.jpg')">
+            <img src="./img/hoodie-sizes.jpg" alt="Thumbnail 3" onclick="changeImage('/img/hoodie-sizes.jpg')">
+        </div>
+    
+        <h2>DIAMOND HOODIE BLACK</h2>
+        <p>8 490 р.</p>
+    
+        <div class="product"></div>
+            <h2>Select Size</h2>
+            <select id="sizeSelector" onchange="updateSize()">
+                <option value="S">Small (S)</option>
+                <option value="M">Medium (M)</option>
+                <option value="L">Large (L)</option>
+                <option value="XL">Extra Large (XL)</option>
+            </select>
+            
+        <p id="selectedSize">   </p> <!-- текст вставляется из js -->
+        
+        <button class="btn purchase-cart__btn" data-sellix-cart-add="66ffe834cf59f" onclick="addToCart('DIAMOND HOODIE BLACK', 8490, './img/hoodie-black.jpg', '66ffe834cf59f')">Добавить в корзину</button>
+        <button class="btn purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">КУПИТЬ</button>
+    
+        <ul class="toggle-list" id="toggleList">
+            <li class="toggle-list__item">
+                <h3 class="toggle-list__heading--title">Характеристики</h3>
+                <img class="toggle-list__heading--img" src="./img/arrow.svg" alt="#">
+                <p class="toggle-list__content">
+                    • unisex<br>
+                    • 4000+ стойких страз<br>
+                    • уникальный силуэт oversize hmmls<br>
+                    • логотип выполнен шелкографией<br>
+                    • худи выполнен из плотного футера<br><br>
+                    
+                    Состав: 100% хлопок<br>
+                    Плотность: 340 гр/м</p>
+            </li>
+            <li class="toggle-list__item">
+                <h3 class="toggle-list__heading--title">Размерная таблица</h3>
+                <img class="toggle-list__heading--img" src="./img/arrow.svg" alt="#">
+                <p class="toggle-list__content">
+                    <img class="size__table" src="./img/hoodie-sizes.jpg" alt="">
+                </p>
+            </li>
+            <li class="toggle-list__item">
+                <h3 class="toggle-list__heading--title">Доставка</h3>
+                <img class="toggle-list__heading--img" src="./img/arrow.svg" alt="#">
+                <p class="toggle-list__content">Доставка в течение 15-20 рабочих дней</p>
+            </li>
+        </ul>
+    </div>
 
     <script src="./scripts/shopping-cart.js"></script>
     <script src="./scripts/carousel.js"> </script>
