@@ -1,4 +1,4 @@
-let cart = []; // Array to hold cart items
+let cart = JSON.parse(localStorage.getItem('cart')) || []; // Load cart from local storage or initialize as empty
 
 function addToCart(productName, productPrice, productImage, productId) {
     const existingProductIndex = cart.findIndex(item => item.id === productId);
@@ -20,6 +20,7 @@ function addToCart(productName, productPrice, productImage, productId) {
     }
 
     updateCart(); // Update the cart display
+    saveCartToLocalStorage(); // Save updated cart to local storage
 }
 
 function updateCart() {
@@ -42,40 +43,50 @@ function updateCart() {
 }
 
 function removeFromCart(productId) {
-    // Find the product in the cart using the unique ID
     const index = cart.findIndex(item => item.id === productId);
     if (index > -1) {
-        // Reduce the quantity or remove the item from the cart
         if (cart[index].quantity > 1) {
-            cart[index].quantity--; // Decrease quantity
+            // Decrease quantity
+            cart[index].quantity--;
         } else {
-            cart.splice(index, 1); // Remove the item completely
+            // Remove the item completely
+            cart.splice(index, 1);
         }
+        
+        updateCart(); // Update the cart display
+        saveCartToLocalStorage(); // Save updated cart to local storage
     }
-    updateCart(); // Update the cart display
 }
 
-// Handle checkout process
 function handleCheckout() {
-    // Check if the cart is empty
-    if (cart.length === 0) {
+    // Load the latest cart from local storage to ensure it reflects current state
+    const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    let checkoutItems;
+    
+    if (storedCart.length === 0) {
         alert("Ваша корзина пуста."); // Alert if cart is empty
-        return;
+        
+        // Set checkoutItems to null for Sellix API call when there are no items in the cart
+        checkoutItems = null; 
+    } else {
+        checkoutItems = storedCart.map(item => `${item.id}:${item.quantity}`).join(',');
     }
 
-    // Prepare checkout items string
-    const checkoutItems = cart.map(item => `${item.id}:${item.quantity}`).join(',');
-
-    // Update the Sellix checkout button data attribute
     const checkoutButton = document.querySelector('[data-sellix-cart]');
-    checkoutButton.setAttribute('data-sellix-cart', checkoutItems);
     
-    // Here you can also trigger the checkout modal if needed
+    // Pass null if there are no items in the storedCart, otherwise pass checkoutItems
+    checkoutButton.setAttribute('data-sellix-cart', checkoutItems);
+
     console.log("Checkout items:", checkoutItems);
 
-    // If you have an explicit checkout function from Sellix, call it here
-    // Example: sellixCheckout(checkoutItems);
+    // Proceed with your API call or further processing here...
 }
 
-// Example button for checkout
-// <button data-sellix-cart="PRODUCT_UNIQID:QUANTITY,PRODUCT_UNIQID" onclick="handleCheckout()">Checkout</button>
+// Function to save the current state of the cart to local storage
+function saveCartToLocalStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Initialize the display on page load
+document.addEventListener('DOMContentLoaded', updateCart);
