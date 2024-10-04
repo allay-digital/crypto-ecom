@@ -1,6 +1,6 @@
 .golos-text-uniquifier {
     font-family: "Golos Text", sans-serif;
-      font-optical-sizing: auto;
+    font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
 }
@@ -33,6 +33,7 @@ p{
     color: #000;
     font-size: 12px;
     margin: 0;
+    font-family: "Golos Text", sans-serif;
 }
 p2{
     color: red;
@@ -74,7 +75,8 @@ p3 {
     width: 100%;
 }
 .purchase__btn{
-    width: 50%;
+    width: 120px;
+    font-family: "Golos Text", sans-serif;
     height: 36px;
     border: 0;
     border-radius: 25px;

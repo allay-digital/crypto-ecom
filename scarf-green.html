@@ -26,50 +26,51 @@
         <ul id="cartItems"></ul>
     </div>
     
-    <div class="carousel">
-        <img id="mainImage" src="./img/scarf-green.jpg" alt="Carousel Image" class="carousel-image">
+    <div class="container">
+        <div class="carousel">
+            <img id="mainImage" src="./img/scarf-green.jpg" alt="Carousel Image" class="carousel-image">
+        </div>
+    
+        <div class="thumbnails">
+            <img src="./img/scarf-green.jpg" alt="Thumbnail 1" onclick="changeImage('./img/scarf-green.jpg')">
+            <img src="./img/scarf-grren-2.jpg" alt="Thumbnail 2" onclick="changeImage('./img/scarf-grren-2.jpg')">
+        </div>
+    
+        <h2>MONEY SCARF GREEN</h2>
+        <p>3 490 р.</p>
+            
+        </div>
+    
+        <button class="btn purchase-cart__btn" data-sellix-cart-add="66ffe834cf59f" onclick="addToCart('DIAMOND HOODIE BLACK', 8490, './img/hoodie-black.jpg', '66ffe834cf59f')">Добавить в корзину</button>
+        <button class="btn purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">КУПИТЬ</button>
+    
+        <ul class="toggle-list" id="toggleList">
+            <li class="toggle-list__item">
+                <h3 class="toggle-list__heading--title">Характеристики</h3>
+                <img class="toggle-list__heading--img" src="./img/arrow.svg" alt="#">
+                <p class="toggle-list__content">
+                    Шарф от HOMME+LESS в виде доллара, качественно связанный на нашем производстве. Данный шарф отлично вписывается в почти любой образ и делает его уникальным. Шарф достаточно большой - им с лёгкостью можно будет перевязаться и согреться в холодную зиму.<br><br>
+                    Размер: 35 х 160см<br>
+                    Состав: 50% акрил / 50% шерсть
+            </li>
+            <li class="toggle-list__item">
+                <h3 class="toggle-list__heading--title">Уход за изделием</h3>
+                <img class="toggle-list__heading--img" src="./img/arrow.svg" alt="#">
+                <p class="toggle-list__content">
+                    Рекомендуем стирать вещи при температуре 30 градусов, наизнанку в деликатном режиме.<br>
+                    Базовая рекомендация, использовать химические средства (порошки, гели, кондиционеры) не низкого ценового диапазона.<br>
+                    Плохое или некачественное средство может оказывать сильное влияние на текстуру ткани и исказить цвет.<br><br>
+                    
+                    ВАЖНО! Для максимально долгого сохранения изделия в исходном виде, рекомендуем бережно относиться к вещи, с любовью.
+                </p>
+            </li>
+            <li class="toggle-list__item">
+                <h3 class="toggle-list__heading--title">Доставка</h3>
+                <img class="toggle-list__heading--img" src="./img/arrow.svg" alt="#">
+                <p class="toggle-list__content">Доставка в течение 2-3 рабочих дней</p>
+            </li>
+        </ul>
     </div>
-
-    <div class="thumbnails">
-        <img src="./img/scarf-green.jpg" alt="Thumbnail 1" onclick="changeImage('./img/scarf-green.jpg')">
-        <img src="./img/scarf-grren-2.jpg" alt="Thumbnail 2" onclick="changeImage('./img/scarf-grren-2.jpg')">
-    </div>
-
-    <h2>MONEY SCARF GREEN</h2>
-    <p>3 490 р.</p>
-        
-    </div>
-
-    <button class="purchase__btn" data-sellix-product="5ea869ce3e971" type="submit">
-        КУПИТЬ
-    </button>
-
-    <ul class="toggle-list" id="toggleList">
-        <li class="toggle-list__item">
-            <h3 class="toggle-list__heading--title">Характеристики</h3>
-            <img class="toggle-list__heading--img" src="./img/arrow.svg" alt="#">
-            <p class="toggle-list__content">
-                Шарф от HOMME+LESS в виде доллара, качественно связанный на нашем производстве. Данный шарф отлично вписывается в почти любой образ и делает его уникальным. Шарф достаточно большой - им с лёгкостью можно будет перевязаться и согреться в холодную зиму.<br><br>
-                Размер: 35 х 160см<br>
-                Состав: 50% акрил / 50% шерсть
-        </li>
-        <li class="toggle-list__item">
-            <h3 class="toggle-list__heading--title">Уход за изделием</h3>
-            <img class="toggle-list__heading--img" src="./img/arrow.svg" alt="#">
-            <p class="toggle-list__content">
-                Рекомендуем стирать вещи при температуре 30 градусов, наизнанку в деликатном режиме.<br>
-                Базовая рекомендация, использовать химические средства (порошки, гели, кондиционеры) не низкого ценового диапазона.<br>
-                Плохое или некачественное средство может оказывать сильное влияние на текстуру ткани и исказить цвет.<br><br>
-                
-                ВАЖНО! Для максимально долгого сохранения изделия в исходном виде, рекомендуем бережно относиться к вещи, с любовью.
-            </p>
-        </li>
-        <li class="toggle-list__item">
-            <h3 class="toggle-list__heading--title">Доставка</h3>
-            <img class="toggle-list__heading--img" src="./img/arrow.svg" alt="#">
-            <p class="toggle-list__content">Доставка в течение 2-3 рабочих дней</p>
-        </li>
-    </ul>
     
     <script src="./scripts/shopping-cart.js"></script>
     <script src="./scripts/carousel.js"> </script>
